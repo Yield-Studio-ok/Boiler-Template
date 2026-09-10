@@ -1,0 +1,26 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Boilerplate monorepo — Next.js + NestJS + PostgreSQL",
+  "scripts": {
+    "dev": "docker compose up --build",
+    "start": "docker compose -f docker-compose.prod.yml up --build",
+    "build": "docker compose -f docker-compose.prod.yml build",
+    "build:apps": "pnpm --filter @boilerplate/api build && pnpm --filter @boilerplate/web build",
+    "typecheck": "pnpm --filter @boilerplate/api typecheck && pnpm --filter @boilerplate/web typecheck",
+    "lint": "oxlint .",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "lefthook": "^2.1.10",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "packageManager": "pnpm@10.24.0"
+}

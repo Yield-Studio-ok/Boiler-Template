@@ -1,0 +1,66 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: #0f0f0f;
+  color: #f0f0f0;
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 280px;
+  margin: 24px auto;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background: #5c4dff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4a3de8;
+}
